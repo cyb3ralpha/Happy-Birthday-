@@ -1,34 +1,33 @@
-/* Reset and base styles */
+/* ==== Reset & Base ==== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top, #ffdde1, #ee9ca7);
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
   height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
   position: relative;
+  color: #fff;
 }
 
-/* Particle Background */
+/* ==== Particle Background ==== */
 .particles::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  background: repeating-radial-gradient(circle, rgba(255,255,255,0.08) 0 1px, transparent 1px 10px);
-  animation: moveParticles 40s linear infinite;
+  background: repeating-radial-gradient(circle, rgba(255,255,255,0.05) 0 1px, transparent 1px 10px);
+  animation: moveParticles 50s linear infinite;
   z-index: 0;
 }
 
-/* Fireworks canvas layer */
+/* ==== Fireworks Canvas ==== */
 #fireworks {
   position: absolute;
   top: 0;
@@ -37,45 +36,48 @@ body {
   pointer-events: none;
 }
 
-/* Card styling */
+/* ==== Main Card ==== */
 .card {
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(12px);
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
   padding: 40px 30px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   text-align: center;
-  max-width: 600px;
+  max-width: 620px;
+  width: 90%;
   z-index: 5;
   position: relative;
+  animation: fadeIn 2s ease;
 }
 
-/* Headings */
+/* ==== Headings ==== */
 .title {
   font-family: 'Pacifico', cursive;
   font-size: 2.8em;
-  text-shadow: 0 0 10px #ffffffcc, 0 0 20px #ff6ec4;
-  animation: fadeIn 1.5s ease-in-out;
+  text-shadow: 0 0 20px #ffffff99;
+  margin-bottom: 15px;
 }
 
 .subtitle {
   font-size: 1.2em;
-  margin: 15px 0 25px;
   font-weight: 300;
-  min-height: 80px;
+  margin-bottom: 20px;
+  min-height: 70px;
 }
 
-/* Typing animation (optional placeholder height managed via JS) */
+/* ==== Typing Effect ==== */
 .typing {
   border-right: 2px solid white;
   white-space: nowrap;
   overflow: hidden;
+  display: inline-block;
 }
 
-/* Cake */
+/* ==== Cake ==== */
 .cake {
-  margin: 25px auto;
+  margin: 20px auto 30px;
   width: 120px;
   position: relative;
 }
@@ -84,9 +86,9 @@ body {
   border-radius: 10px;
   margin-bottom: 4px;
 }
-.layer-bottom { background: #8b4513; }
-.layer-middle { background: #ff69b4; }
-.layer-top { background: #ffb6c1; }
+.layer-bottom { background: #6b3e26; }
+.layer-middle { background: #f06292; }
+.layer-top { background: #f8bbd0; }
 
 .candle {
   width: 10px;
@@ -106,28 +108,19 @@ body {
   animation: flicker 0.4s infinite alternate;
 }
 
-/* Button */
-.btn {
-  margin-top: 20px;
-  padding: 12px 28px;
-  font-size: 1.1em;
-  border: none;
-  border-radius: 30px;
-  background-color: #ff4081;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  transition: 0.3s;
-}
-.btn:hover {
-  background-color: #e91e63;
-  transform: scale(1.05);
+/* ==== Countdown ==== */
+.countdown {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffe;
+  margin-top: 10px;
+  animation: fadeIn 2s ease;
 }
 
-/* Gift box */
+/* ==== Gift Box ==== */
 .gift-box {
   font-size: 2.5rem;
-  margin: 20px auto;
+  margin: 20px 0;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
@@ -135,16 +128,25 @@ body {
   transform: scale(1.2) rotate(10deg);
 }
 
-/* Countdown */
-.countdown {
-  font-size: 1rem;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #fff8f0;
-  animation: fadeIn 2s ease-in-out;
+/* ==== Button ==== */
+.btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
 }
 
-/* Balloons */
+/* ==== Balloons ==== */
 .balloon {
   position: absolute;
   bottom: -100px;
@@ -152,11 +154,11 @@ body {
   height: 60px;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 50% 50% 45% 45%;
-  animation: floatUp 10s infinite linear;
+  animation: floatUp 12s infinite linear;
   z-index: 1;
 }
 
-/* Animations */
+/* ==== Animations ==== */
 @keyframes flicker {
   0% { transform: scale(1); opacity: 1; }
   100% { transform: scale(1.2); opacity: 0.6; }
@@ -173,20 +175,20 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
-@media screen and (max-width: 600px) {
+/* ==== Responsive ==== */
+@media (max-width: 600px) {
   .title {
-    font-size: 2em;
+    font-size: 2.2rem;
   }
   .subtitle {
-    font-size: 1em;
+    font-size: 1rem;
   }
   .btn {
-    font-size: 1em;
-    padding: 10px 20px;
+    font-size: 1rem;
+    padding: 10px 24px;
   }
 }
