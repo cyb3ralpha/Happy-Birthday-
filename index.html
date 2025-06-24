@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,27 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🎉 Happy Birthday!</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- Confetti -->
   <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 </head>
 <body>
 
-  <!-- Particles -->
   <div class="particles"></div>
   <canvas id="fireworks"></canvas>
 
   <!-- Balloons -->
-  <div class="balloon" style="left: 15%; animation-delay: 0s;"></div>
-  <div class="balloon" style="left: 35%; animation-delay: 2s;"></div>
-  <div class="balloon" style="left: 55%; animation-delay: 4s;"></div>
-  <div class="balloon" style="left: 75%; animation-delay: 1s;"></div>
+  <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="balloon" style="left: 30%; animation-delay: 2s;"></div>
+  <div class="balloon" style="left: 50%; animation-delay: 4s;"></div>
+  <div class="balloon" style="left: 70%; animation-delay: 1s;"></div>
   <div class="balloon" style="left: 90%; animation-delay: 3s;"></div>
 
   <!-- Main Card -->
   <div class="card">
-    <h1 class="title glow">🎂 Happy Birthday, Sarah! 🎉</h1>
+    <h1 class="title">🎂 Happy Birthday, Sarah! 🎉</h1>
     <p class="subtitle typing" id="typed-text"></p>
 
     <!-- Cake -->
@@ -39,7 +36,7 @@
     <!-- Countdown -->
     <div class="countdown" id="countdown"></div>
 
-    <!-- Surprise Gift -->
+    <!-- Gift Box -->
     <div class="gift-box" onclick="throwSurprise()">🎁 Click Me!</div>
 
     <!-- Button -->
