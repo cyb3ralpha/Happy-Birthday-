@@ -1,3 +1,4 @@
+
 const jsConfetti = new JSConfetti()
 
 function throwConfetti() {
@@ -9,7 +10,7 @@ function throwConfetti() {
   launchFireworks();
 }
 
-// 🎇 Fireworks
+// Fireworks
 const canvas = document.getElementById('fireworks');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -45,13 +46,12 @@ function launchFireworks() {
   setTimeout(() => clearInterval(interval), 1000);
 }
 
-// 🎁 Surprise Box
 function throwSurprise() {
   alert("🎊 Surprise! You're amazing and so loved! 🎈");
   throwConfetti();
 }
 
-// ⏳ Countdown
+// Countdown
 const birthday = new Date("June 30, 2025 00:00:00").getTime();
 const countdown = document.getElementById("countdown");
 
@@ -65,7 +65,7 @@ setInterval(() => {
   countdown.innerHTML = `⏳ ${d}d ${h}h ${m}m ${s}s until the big day!`;
 }, 1000);
 
-// ✍️ Typing Text
+// Typing
 const typedText = "Wishing you a magical day filled with smiles, love, and cake! 🎂✨";
 let i = 0;
 function typeWriter() {
